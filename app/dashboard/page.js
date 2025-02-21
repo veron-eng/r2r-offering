@@ -1,7 +1,7 @@
 export default function Dashboard() {
   return (
     <main>
-      <button className="btn">Start Now</button>
+      <h1>Private Dashboard</h1>
     </main>
   )
 }
