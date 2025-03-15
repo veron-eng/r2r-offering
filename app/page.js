@@ -1,5 +1,5 @@
 import ButtonLogin from "@/components/ButtonLogin";
-import ListItem from "@/components/ListItem";
+import FAQListItem from "@/components/FAQListItem";
 
 export default function Home() {
   const isLoggedIn = true;
@@ -20,8 +20,8 @@ export default function Home() {
         <div className="max-w-3xl mx-auto flex justify-between items-center px-8 py-2">
           <div className="font-bold">CodefastSass</div>
           <div className="space-x-4 max-md:hidden">
-            <a className="link link-hover">Pricing</a>
-            <a className="link link-hover">FAQ</a>
+            <a className="link link-hover" href="#pricing">Pricing</a>
+            <a className="link link-hover" href="#faq">FAQ</a>
           </div>
           <div className="">
             <ButtonLogin isLoggedIn={isLoggedIn} name={name} />
@@ -37,7 +37,7 @@ export default function Home() {
         <ButtonLogin isLoggedIn={isLoggedIn} name={name} />
       </section>
       {/* PRICING SECTION */}
-      <section className="bg-base-200 py-32">
+      <section className="bg-base-200" id="pricing">
         <div className="px-8 py-32 max-w-3xl mx-auto">
           <p className="text-sm uppercase font-medium text-center text-primary">
             Pricing
@@ -45,6 +45,7 @@ export default function Home() {
           <h2 className="text-3xl lg:text-4xl font-extrabold mb-12 text-center">
             A Pricing that adapts to your needs
           </h2>
+
           <div className="p-8 bg-base-100 w-96 rounded-3xl mx-auto space-y-6">
             <div className="flex gap-2 items-baseline ">
               <div className="text-4xl font-black">£12</div>
@@ -55,19 +56,43 @@ export default function Home() {
               {pricingFeaturesList.map((priceItem) => {
                 return (
                   <li key={priceItem} className="flex items-center gap-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="text-green-600 size-4">
-                          <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                      </svg>
-                      {priceItem}
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="text-green-600 size-4">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                    </svg>
+                    {priceItem}
                   </li>
-              )
-          
+                )
+
               })}
             </ul>
-            <ButtonLogin isLoggedIn={isLoggedIn} name={name} extraStyle="w-full"/>
+            <ButtonLogin isLoggedIn={isLoggedIn} name={name} extraStyle="w-full" />
           </div>
         </div>
 
+      </section>
+
+      {/* FAQ SECTION */}
+      <section className="bg-base-200" id="faq">
+        <div className="px-8 py-32 max-w-3xl mx-auto">
+          <p className="text-sm uppercase font-medium text-center text-primary">
+            FAQ
+          </p>
+          <h2 className="text-3xl lg:text-4xl font-extrabold mb-12 text-center">
+            Frequently Asked Questions
+          </h2>
+
+          <ul className="max-w-lg mx-auto">
+            {
+              [
+                { question: "first question", answer: "first answer" },
+                { question: "second question", answer: "second answer" },
+                { question: "third quesion", answer: "third answer" },
+              ].map((qa) => (
+                <FAQListItem key={qa.question} qa={qa}></FAQListItem>
+              ))
+            }
+          </ul>
+        </div>
       </section>
     </main>
   )
