@@ -1,8 +1,18 @@
 import ButtonLogin from "@/components/ButtonLogin";
+import ListItem from "@/components/ListItem";
 
 export default function Home() {
   const isLoggedIn = true;
   const name = "Veron"
+
+  const pricingFeaturesList = [
+    "Collect customer feedback",
+    "Unlimited boards",
+    "Admin dashboard",
+    "24/7 support"
+  ]
+
+
   return (
     <main>
       {/* HEADER SECTION */}
@@ -42,29 +52,19 @@ export default function Home() {
             </div>
 
             <ul className="space-y-2 ">
-              <li className="flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="text-green-600 size-4">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                </svg>
-                Collect customer feedback</li>
-              <li className="flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="text-green-600 size-4">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                </svg>
-                Unlimited boards</li>
-              <li className="flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="text-green-600 size-4">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                </svg>
-                Admin dashboard</li>
-              <li className="flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="text-green-600 size-4">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                </svg>
-                24/7 support
-              </li>
+              {pricingFeaturesList.map((priceItem) => {
+                return (
+                  <li key={priceItem} className="flex items-center gap-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="text-green-600 size-4">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                      </svg>
+                      {priceItem}
+                  </li>
+              )
+          
+              })}
             </ul>
-            <ButtonLogin isLoggedIn={isLoggedIn} name={name} />
+            <ButtonLogin isLoggedIn={isLoggedIn} name={name} extraStyle="w-full"/>
           </div>
         </div>
 
