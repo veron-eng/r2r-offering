@@ -18,7 +18,7 @@ export default function Home() {
       {/* HEADER SECTION */}
       <section className="bg-base-200">
         <div className="max-w-5xl mx-auto flex justify-between items-center px-8 py-2">
-          <div className="font-bold">R2R Websites</div>
+          <div className="font-bold">Rent Press</div>
           <div className="space-x-4 max-md:hidden">
             <a className="link link-hover" href="#features">Features</a>
             <a className="link link-hover" href="#benefits">Benefits</a>
@@ -167,7 +167,7 @@ export default function Home() {
             </div>
             <div className="bg-primary/10 p-8 rounded-xl">
               <blockquote className="text-lg italic opacity-90">
-                "Since launching my professional website, I've secured 5 new properties from landlords who specifically mentioned they were impressed by my online presence. The ROI has been incredible."
+                "Since launching my professional website with Rent Press, I've secured 5 new properties from landlords who specifically mentioned they were impressed by my online presence. The ROI has been incredible."
                 <footer className="mt-4 font-bold">- Sarah T., R2R Operator in London</footer>
               </blockquote>
             </div>
@@ -257,7 +257,7 @@ export default function Home() {
       <section className="bg-base-300 py-12">
         <div className="max-w-5xl mx-auto px-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="font-bold text-xl mb-4 md:mb-0">R2R Websites</div>
+            <div className="font-bold text-xl mb-4 md:mb-0">Rent Press</div>
             <div className="flex gap-6">
               <a href="#features" className="link link-hover">Features</a>
               <a href="#benefits" className="link link-hover">Benefits</a>
@@ -266,7 +266,7 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-6 text-center md:text-left opacity-75 text-sm">
-            © {new Date().getFullYear()} R2R Websites. All rights reserved.
+            © {new Date().getFullYear()} Rent Press. All rights reserved.
           </div>
         </div>
       </section>
