@@ -476,7 +476,15 @@ export default function Home() {
       <section className="bg-base-300 py-8 sm:py-12">
         <div className="max-w-5xl mx-auto px-4 sm:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="font-bold text-xl mb-4 md:mb-0">Rent Press</div>
+            <div className="mb-4 md:mb-0">
+              <Image 
+                src="/assets/logo-no-background.png" 
+                alt="Rent Press Logo" 
+                width={240} 
+                height={80} 
+                className="h-24 w-auto"
+              />
+            </div>
             <div className="flex flex-wrap gap-4 md:gap-6 justify-center">
               <a href="#features" className="link link-hover">Features</a>
               <a href="#how-it-works" className="link link-hover">How It Works</a>

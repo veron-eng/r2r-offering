@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import ButtonCTA from "@/components/ButtonCTA";
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,7 +15,15 @@ export default function Header() {
   return (
     <header className="bg-base-200 sticky top-0 z-50">
       <div className="max-w-5xl mx-auto flex justify-between items-center px-8 py-2">
-        <div className="font-bold">Rent Press</div>
+        <div>
+          <Image 
+            src="/assets/logo-no-background.png" 
+            alt="Rent Press Logo" 
+            width={240} 
+            height={80} 
+            className="h-24 w-auto"
+          />
+        </div>
         
         {/* Desktop Navigation */}
         <div className="space-x-4 hidden md:flex">
