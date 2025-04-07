@@ -2,7 +2,7 @@
 
 const ButtonCTA = ({ text = "Get Started", extraStyle = "" }) => {
   return (
-    <button className={`btn btn-primary ${extraStyle}`}>
+    <button className={`btn btn-primary text-sm sm:text-base ${extraStyle}`}>
       {text}
     </button>
   );

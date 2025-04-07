@@ -10,3 +10,21 @@
 .extra-space {
     padding: 32px;
 }
+
+@layer components {
+  .superhuman-gradient {
+    @apply bg-gradient-to-r from-superhuman-gradient-start to-superhuman-gradient-end;
+  }
+  
+  .superhuman-gradient-hover {
+    @apply hover:from-superhuman-purple-light hover:to-superhuman-blue transition-all duration-300;
+  }
+  
+  .superhuman-text-gradient {
+    @apply bg-clip-text text-transparent bg-superhuman-gradient;
+  }
+  
+  .superhuman-button {
+    @apply px-6 py-3 rounded-lg font-semibold text-white superhuman-gradient superhuman-gradient-hover shadow-lg hover:shadow-xl transition-all duration-300;
+  }
+}

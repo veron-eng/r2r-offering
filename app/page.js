@@ -1,5 +1,7 @@
 import ButtonCTA from "@/components/ButtonCTA";
 import FAQListItem from "@/components/FAQListItem";
+import ROICalculator from "@/components/ROICalculator";
+import Header from "@/components/Header";
 import Image from "next/image";
 import productDemo from "./productDemo.jpeg";
 
@@ -15,28 +17,14 @@ export default function Home() {
 
   return (
     <main>
-      {/* HEADER SECTION */}
-      <section className="bg-base-200">
-        <div className="max-w-5xl mx-auto flex justify-between items-center px-8 py-2">
-          <div className="font-bold">Rent Press</div>
-          <div className="space-x-4 max-md:hidden">
-            <a className="link link-hover" href="#features">Features</a>
-            <a className="link link-hover" href="#benefits">Benefits</a>
-            <a className="link link-hover" href="#pricing">Pricing</a>
-            <a className="link link-hover" href="#faq">FAQ</a>
-          </div>
-          <div className="">
-            <ButtonCTA text="Contact Us" />
-          </div>
-        </div>
-      </section>
+      <Header />
       
       {/* HERO SECTION */}
-      <section className="text-center lg:text-left px-8 py-32 max-w-5xl mx-auto flex flex-col lg:flex-row gap-14 items-center lg:items-start">
-        <Image src={productDemo} alt="Professional property website showcase" className="w-96 rounded-xl shadow-xl"/>
+      <section className="text-center lg:text-left px-4 sm:px-8 py-16 sm:py-32 max-w-5xl mx-auto flex flex-col lg:flex-row gap-8 lg:gap-14 items-center lg:items-start">
+        <Image src={productDemo} alt="Professional property website showcase" className="w-full max-w-md sm:w-96 rounded-xl shadow-xl"/>
         <div>
-          <h1 className="text-4xl lg:text-5xl font-extrabold mb-6">Professional websites for Rent-to-Rent landlords</h1>
-          <div className="opacity-90 mb-10 text-lg">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-4 sm:mb-6">Professional websites for Rent-to-Rent landlords</h1>
+          <div className="opacity-90 mb-6 sm:mb-10 text-base sm:text-lg">
             Showcase your properties with a professional website that attracts more landlords and tenants. Our tailored websites include a powerful CMS and SEO-optimized blog.
           </div>
           <ButtonCTA text="Get Your Website" />
@@ -45,15 +33,15 @@ export default function Home() {
 
       {/* FEATURES SECTION */}
       <section className="bg-base-100" id="features">
-        <div className="px-8 py-32 max-w-5xl mx-auto">
+        <div className="px-4 sm:px-8 py-16 sm:py-32 max-w-5xl mx-auto">
           <p className="text-sm uppercase font-medium text-center text-primary">
             Features
           </p>
-          <h2 className="text-3xl lg:text-4xl font-extrabold mb-12 text-center">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold mb-8 sm:mb-12 text-center">
             Everything you need to showcase your properties
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             <div className="p-6 bg-base-200 rounded-xl">
               <div className="text-primary mb-2">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-8">
@@ -114,20 +102,106 @@ export default function Home() {
               <p className="opacity-75">Integrated contact forms for potential tenants and landlords to get in touch with you.</p>
             </div>
           </div>
+          <div className="mt-12 text-center">
+            <ButtonCTA text="Explore All Features" />
+          </div>
+        </div>
+      </section>
+
+      {/* HOW IT WORKS SECTION */}
+      <section className="bg-base-200" id="how-it-works">
+        <div className="px-4 sm:px-8 py-16 sm:py-32 max-w-5xl mx-auto">
+          <p className="text-sm uppercase font-medium text-center text-primary">
+            The Process
+          </p>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold mb-8 sm:mb-12 text-center">
+            How we create your website
+          </h2>
+
+          <div className="space-y-12 sm:space-y-16">
+            {/* Step 1 */}
+            <div className="flex flex-col md:flex-row gap-8 items-center">
+              <div className="bg-primary/10 rounded-full p-6 flex items-center justify-center">
+                <div className="font-black text-primary text-5xl">1</div>
+              </div>
+              <div className="md:flex-1">
+                <h3 className="text-2xl font-bold mb-3">Initial Contact</h3>
+                <p className="opacity-80 text-lg">
+                  Reach out to us through our contact form or email. Tell us a bit about your R2R business and what you're looking for in a website.
+                </p>
+              </div>
+            </div>
+
+            {/* Step 2 */}
+            <div className="flex flex-col md:flex-row gap-8 items-center">
+              <div className="bg-primary/10 rounded-full p-6 flex items-center justify-center">
+                <div className="font-black text-primary text-5xl">2</div>
+              </div>
+              <div className="md:flex-1">
+                <h3 className="text-2xl font-bold mb-3">Consultation Call</h3>
+                <p className="opacity-80 text-lg">
+                  We'll schedule a personalized consultation call to understand your specific needs, discuss your property portfolio, target audience, and design preferences.
+                </p>
+              </div>
+            </div>
+
+            {/* Step 3 */}
+            <div className="flex flex-col md:flex-row gap-8 items-center">
+              <div className="bg-primary/10 rounded-full p-6 flex items-center justify-center">
+                <div className="font-black text-primary text-5xl">3</div>
+              </div>
+              <div className="md:flex-1">
+                <h3 className="text-2xl font-bold mb-3">Website Development</h3>
+                <p className="opacity-80 text-lg">
+                  Over the next month, we'll develop your custom website with regular check-ins to gather your feedback. We'll make adjustments based on your input to ensure the final product perfectly matches your vision.
+                </p>
+              </div>
+            </div>
+
+            {/* Step 4 */}
+            <div className="flex flex-col md:flex-row gap-8 items-center">
+              <div className="bg-primary/10 rounded-full p-6 flex items-center justify-center">
+                <div className="font-black text-primary text-5xl">4</div>
+              </div>
+              <div className="md:flex-1">
+                <h3 className="text-2xl font-bold mb-3">Launch and Training</h3>
+                <p className="opacity-80 text-lg">
+                  Once you're happy with your website, we'll launch it and provide comprehensive training on how to use the CMS to manage your properties and content.
+                </p>
+              </div>
+            </div>
+
+            {/* Step 5 */}
+            <div className="flex flex-col md:flex-row gap-8 items-center">
+              <div className="bg-primary/10 rounded-full p-6 flex items-center justify-center">
+                <div className="font-black text-primary text-5xl">5</div>
+              </div>
+              <div className="md:flex-1">
+                <h3 className="text-2xl font-bold mb-3">Ongoing Support</h3>
+                <p className="opacity-80 text-lg">
+                  Our relationship doesn't end at launch. We provide ongoing support to address any bugs or issues, and we're available to implement small improvements to keep your website performing at its best.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-12 text-center">
+            <ButtonCTA text="Start Your Journey" />
+          </div>
         </div>
       </section>
 
       {/* BENEFITS SECTION */}
-      <section className="bg-base-200" id="benefits">
-        <div className="px-8 py-32 max-w-5xl mx-auto">
+      <section className="bg-base-100" id="benefits">
+        <div className="px-4 sm:px-8 py-16 sm:py-32 max-w-5xl mx-auto">
           <p className="text-sm uppercase font-medium text-center text-primary">
             Benefits
           </p>
-          <h2 className="text-3xl lg:text-4xl font-extrabold mb-12 text-center">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold mb-8 sm:mb-12 text-center">
             Why a professional website matters
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 items-center">
             <div>
               <ul className="space-y-6">
                 <li className="flex gap-4">
@@ -172,20 +246,144 @@ export default function Home() {
               </blockquote>
             </div>
           </div>
+          <div className="mt-12 text-center">
+            <ButtonCTA text="Transform Your R2R Business" />
+          </div>
+        </div>
+      </section>
+
+      {/* WHY CHOOSE US SECTION */}
+      <section className="bg-base-200" id="why-choose-us">
+        <div className="px-4 sm:px-8 py-16 sm:py-32 max-w-5xl mx-auto">
+          <p className="text-sm uppercase font-medium text-center text-primary">
+            Our Advantage
+          </p>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold mb-8 sm:mb-12 text-center">
+            Why choose Rent Press over other web development services
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+            <div className="bg-base-100 p-8 rounded-xl">
+              <h3 className="text-xl font-bold mb-4 text-primary">R2R Industry Specialists</h3>
+              <p className="mb-6">Unlike general web developers, we exclusively focus on the rent-to-rent industry. We understand the unique challenges and opportunities in the R2R market.</p>
+              
+              <ul className="space-y-3">
+                <li className="flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="text-primary size-5 mt-0.5">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                  </svg>
+                  <span>Custom property listing fields designed for R2R properties</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="text-primary size-5 mt-0.5">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                  </svg>
+                  <span>Layout optimized to showcase your properties to both landlords and tenants</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="text-primary size-5 mt-0.5">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                  </svg>
+                  <span>Templates and content specifically designed for R2R businesses</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-base-100 p-8 rounded-xl">
+              <h3 className="text-xl font-bold mb-4 text-primary">Specialized R2R Tools</h3>
+              <p className="mb-6">Our websites include custom tools that address the specific needs of rent-to-rent operators.</p>
+              
+              <ul className="space-y-3">
+                <li className="flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="text-primary size-5 mt-0.5">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                  </svg>
+                  <span>Dual-audience marketing features to attract both landlords and tenants</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="text-primary size-5 mt-0.5">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                  </svg>
+                  <span>Property availability calendar and vacancy alerts</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="text-primary size-5 mt-0.5">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                  </svg>
+                  <span>Separate landlord information section to build trust with property owners</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-base-100 p-8 rounded-xl">
+              <h3 className="text-xl font-bold mb-4 text-primary">R2R-Specific SEO</h3>
+              <p className="mb-6">Our SEO strategy is tailored to help your R2R business rank for the right keywords.</p>
+              
+              <ul className="space-y-3">
+                <li className="flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="text-primary size-5 mt-0.5">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                  </svg>
+                  <span>Local SEO optimization to target renters in your specific area</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="text-primary size-5 mt-0.5">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                  </svg>
+                  <span>Property-specific keyword strategy for maximum visibility</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="text-primary size-5 mt-0.5">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                  </svg>
+                  <span>Blog content templates focused on R2R-relevant topics</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-base-100 p-8 rounded-xl">
+              <h3 className="text-xl font-bold mb-4 text-primary">Complete R2R Business Solution</h3>
+              <p className="mb-6">We don't just build websites - we help grow your R2R business.</p>
+              
+              <ul className="space-y-3">
+                <li className="flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="text-primary size-5 mt-0.5">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                  </svg>
+                  <span>R2R industry advice and best practices included with every website</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="text-primary size-5 mt-0.5">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                  </svg>
+                  <span>Online marketing strategies specific to property rentals</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="text-primary size-5 mt-0.5">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                  </svg>
+                  <span>Ongoing support from team members who understand the R2R business model</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="mt-12 text-center">
+            <ButtonCTA text="Choose Rent Press" />
+          </div>
         </div>
       </section>
 
       {/* PRICING SECTION */}
       <section className="bg-base-100" id="pricing">
-        <div className="px-8 py-32 max-w-3xl mx-auto">
+        <div className="px-4 sm:px-8 py-16 sm:py-32 max-w-3xl mx-auto">
           <p className="text-sm uppercase font-medium text-center text-primary">
             Pricing
           </p>
-          <h2 className="text-3xl lg:text-4xl font-extrabold mb-12 text-center">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold mb-8 sm:mb-12 text-center">
             Investment that pays for itself
           </h2>
 
-          <div className="p-8 bg-base-200 w-96 rounded-3xl mx-auto space-y-6">
+          <div className="p-6 sm:p-8 bg-base-200 w-full max-w-sm sm:w-96 rounded-3xl mx-auto space-y-6">
             <div className="flex gap-2 items-baseline ">
               <div className="text-4xl font-black">£499</div>
               <div className="uppercase text-sm font-medium opacity-60">one-time setup</div>
@@ -207,18 +405,39 @@ export default function Home() {
                 )
               })}
             </ul>
-            <ButtonCTA text="Get Started" extraStyle="w-full" />
+            <ButtonCTA text="Get Started Today" extraStyle="w-full" />
+          </div>
+        </div>
+      </section>
+
+      {/* CALCULATOR SECTION */}
+      <section className="bg-base-200" id="calculator">
+        <div className="px-4 sm:px-8 py-16 sm:py-32 max-w-4xl mx-auto">
+          <p className="text-sm uppercase font-medium text-center text-primary">
+            Return on Investment
+          </p>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold mb-4 sm:mb-6 text-center">
+            See how quickly your website pays for itself
+          </h2>
+          <p className="text-center mb-8 sm:mb-12 max-w-2xl mx-auto">
+            Just one additional property secured through your professional website can more than pay for the entire investment. Use our calculator to see exactly when you'll break even.
+          </p>
+          
+          <ROICalculator />
+
+          <div className="mt-12 text-center">
+            <ButtonCTA text="Start Your Journey" />
           </div>
         </div>
       </section>
 
       {/* FAQ SECTION */}
-      <section className="bg-base-200" id="faq">
-        <div className="px-8 py-32 max-w-3xl mx-auto">
+      <section className="bg-base-100" id="faq">
+        <div className="px-4 sm:px-8 py-16 sm:py-32 max-w-3xl mx-auto">
           <p className="text-sm uppercase font-medium text-center text-primary">
             FAQ
           </p>
-          <h2 className="text-3xl lg:text-4xl font-extrabold mb-12 text-center">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold mb-8 sm:mb-12 text-center">
             Frequently Asked Questions
           </h2>
 
@@ -254,14 +473,17 @@ export default function Home() {
       </section>
 
       {/* FOOTER SECTION */}
-      <section className="bg-base-300 py-12">
-        <div className="max-w-5xl mx-auto px-8">
+      <section className="bg-base-300 py-8 sm:py-12">
+        <div className="max-w-5xl mx-auto px-4 sm:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="font-bold text-xl mb-4 md:mb-0">Rent Press</div>
-            <div className="flex gap-6">
+            <div className="flex flex-wrap gap-4 md:gap-6 justify-center">
               <a href="#features" className="link link-hover">Features</a>
+              <a href="#how-it-works" className="link link-hover">How It Works</a>
               <a href="#benefits" className="link link-hover">Benefits</a>
+              <a href="#why-choose-us" className="link link-hover">Why Choose Us</a>
               <a href="#pricing" className="link link-hover">Pricing</a>
+              <a href="#calculator" className="link link-hover">ROI Calculator</a>
               <a href="#faq" className="link link-hover">FAQ</a>
             </div>
           </div>
