@@ -13,7 +13,7 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-base-200 sticky top-0 z-50">
+    <header className="bg-base-200">
       <div className="max-w-5xl mx-auto flex justify-between items-center px-8 py-2">
         <div>
           <Image 
