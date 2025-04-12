@@ -128,7 +128,7 @@ export default function Home() {
               <div className="md:flex-1">
                 <h3 className="text-2xl font-bold mb-3">Initial Contact</h3>
                 <p className="opacity-80 text-lg">
-                  Reach out to us through our contact form or email. Tell us a bit about your R2R business and what you're looking for in a website.
+                  Reach out to us through our contact form or email. Tell us a bit about your R2R business and what you&apos;re looking for in a website.
                 </p>
               </div>
             </div>
@@ -141,7 +141,7 @@ export default function Home() {
               <div className="md:flex-1">
                 <h3 className="text-2xl font-bold mb-3">Consultation Call</h3>
                 <p className="opacity-80 text-lg">
-                  We'll schedule a personalized consultation call to understand your specific needs, discuss your property portfolio, target audience, and design preferences.
+                  We&apos;ll schedule a personalized consultation call to understand your specific needs, discuss your property portfolio, target audience, and design preferences.
                 </p>
               </div>
             </div>
@@ -154,7 +154,7 @@ export default function Home() {
               <div className="md:flex-1">
                 <h3 className="text-2xl font-bold mb-3">Website Development</h3>
                 <p className="opacity-80 text-lg">
-                  Over the next month, we'll develop your custom website with regular check-ins to gather your feedback. We'll make adjustments based on your input to ensure the final product perfectly matches your vision.
+                  Over the next month, we&apos;ll develop your custom website with regular check-ins to gather your feedback. We&apos;ll make adjustments based on your input to ensure the final product perfectly matches your vision.
                 </p>
               </div>
             </div>
@@ -167,7 +167,7 @@ export default function Home() {
               <div className="md:flex-1">
                 <h3 className="text-2xl font-bold mb-3">Launch and Training</h3>
                 <p className="opacity-80 text-lg">
-                  Once you're happy with your website, we'll launch it and provide comprehensive training on how to use the CMS to manage your properties and content.
+                  Once you&apos;re happy with your website, we&apos;ll launch it and provide comprehensive training on how to use the CMS to manage your properties and content.
                 </p>
               </div>
             </div>
@@ -180,7 +180,7 @@ export default function Home() {
               <div className="md:flex-1">
                 <h3 className="text-2xl font-bold mb-3">Ongoing Support</h3>
                 <p className="opacity-80 text-lg">
-                  Our relationship doesn't end at launch. We provide ongoing support to address any bugs or issues, and we're available to implement small improvements to keep your website performing at its best.
+                  Our relationship doesn&apos;t end at launch. We provide ongoing support to address any bugs or issues, and we&apos;re available to implement small improvements to keep your website performing at its best.
                 </p>
               </div>
             </div>
@@ -235,14 +235,14 @@ export default function Home() {
                   </div>
                   <div>
                     <h3 className="font-bold text-lg">Stand out from competition</h3>
-                    <p className="opacity-75">Most R2R operators don't have professional websites, giving you a significant competitive advantage.</p>
+                    <p className="opacity-75">Most R2R operators don&apos;t have professional websites, giving you a significant competitive advantage.</p>
                   </div>
                 </li>
               </ul>
             </div>
             <div className="bg-primary/10 p-8 rounded-xl">
               <blockquote className="text-lg italic opacity-90">
-                "Since launching my professional website with Rent Press, I've secured 5 new properties from landlords who specifically mentioned they were impressed by my online presence. The ROI has been incredible."
+                &ldquo;Since launching my professional website with Rent Press, I&apos;ve secured 5 new properties from landlords who specifically mentioned they were impressed by my online presence. The ROI has been incredible.&rdquo;
                 <footer className="mt-4 font-bold">- Sarah T., R2R Operator in London</footer>
               </blockquote>
             </div>
@@ -344,7 +344,7 @@ export default function Home() {
 
             <div className="bg-base-100 p-8 rounded-xl">
               <h3 className="text-xl font-bold mb-4 text-primary">Complete R2R Business Solution</h3>
-              <p className="mb-6">We don't just build websites - we help grow your R2R business.</p>
+              <p className="mb-6">We don&apos;t just build websites - we help grow your R2R business.</p>
               
               <ul className="space-y-3">
                 <li className="flex items-start gap-2">
@@ -421,7 +421,7 @@ export default function Home() {
             See how quickly your website pays for itself
           </h2>
           <p className="text-center mb-8 sm:mb-12 max-w-2xl mx-auto">
-            Just one additional property secured through your professional website can more than pay for the entire investment. Use our calculator to see exactly when you'll break even.
+            Just one additional property secured through your professional website can more than pay for the entire investment. Use our calculator to see exactly when you&apos;ll break even.
           </p>
           
           <ROICalculator />
