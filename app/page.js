@@ -4,7 +4,6 @@ import ROICalculator from "@/components/ROICalculator";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Image from "next/image";
-import productDemo from "./productDemo.jpeg";
 
 export default function Home() {
   const pricingFeaturesList = [
@@ -22,7 +21,13 @@ export default function Home() {
       
       {/* HERO SECTION */}
       <section className="text-center lg:text-left px-4 sm:px-8 py-16 sm:py-32 max-w-5xl mx-auto flex flex-col lg:flex-row gap-8 lg:gap-14 items-center lg:items-start">
-        <Image src={productDemo} alt="Professional property website showcase" className="w-full max-w-md sm:w-96 rounded-xl shadow-xl"/>
+        <Image 
+          src="/assets/images/property-hero.jpg" 
+          alt="Professional property showcase" 
+          width={500}
+          height={350}
+          className="w-full max-w-md sm:w-96 rounded-xl shadow-xl object-cover"
+        />
         <div>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-4 sm:mb-6">Professional websites for Rent-to-Rent landlords</h1>
           <div className="opacity-90 mb-6 sm:mb-10 text-base sm:text-lg">
