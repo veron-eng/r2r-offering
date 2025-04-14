@@ -28,7 +28,7 @@ export default function Home() {
           <div className="opacity-90 mb-6 sm:mb-10 text-base sm:text-lg">
             Showcase your properties with a professional website that attracts more landlords and tenants. Our tailored websites include a powerful CMS and SEO-optimized blog.
           </div>
-          <ButtonCTA text="Get Your Website" />
+          <ButtonCTA text="Get Your Website" href="#contact" />
         </div>
       </section>
 
@@ -104,7 +104,7 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-12 text-center">
-            <ButtonCTA text="Explore All Features" />
+            <ButtonCTA text="Explore All Features" href="#how-it-works" />
           </div>
         </div>
       </section>
@@ -187,7 +187,7 @@ export default function Home() {
           </div>
 
           <div className="mt-12 text-center">
-            <ButtonCTA text="Start Your Journey" />
+            <ButtonCTA text="Start Your Journey" href="#pricing" />
           </div>
         </div>
       </section>
@@ -248,7 +248,7 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-12 text-center">
-            <ButtonCTA text="Transform Your R2R Business" />
+            <ButtonCTA text="Transform Your R2R Business" href="#why-choose-us" />
           </div>
         </div>
       </section>
@@ -369,7 +369,7 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-12 text-center">
-            <ButtonCTA text="Choose Rent Press" />
+            <ButtonCTA text="Choose Rent Press" href="#pricing" />
           </div>
         </div>
       </section>
@@ -406,7 +406,7 @@ export default function Home() {
                 )
               })}
             </ul>
-            <ButtonCTA text="Get Started Today" extraStyle="w-full" />
+            <ButtonCTA text="Get Started Today" extraStyle="w-full" href="#contact" />
           </div>
         </div>
       </section>
@@ -427,7 +427,7 @@ export default function Home() {
           <ROICalculator />
 
           <div className="mt-12 text-center">
-            <ButtonCTA text="Start Your Journey" />
+            <ButtonCTA text="Start Your Journey" href="#contact" />
           </div>
         </div>
       </section>
@@ -470,6 +470,38 @@ export default function Home() {
               ))
             }
           </ul>
+        </div>
+      </section>
+
+      {/* CONTACT SECTION */}
+      <section className="bg-base-200" id="contact">
+        <div className="px-4 sm:px-8 py-16 sm:py-32 max-w-3xl mx-auto">
+          <p className="text-sm uppercase font-medium text-center text-primary">
+            Get In Touch
+          </p>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold mb-8 sm:mb-12 text-center">
+            Contact Us
+          </h2>
+
+          <div className="bg-base-100 p-8 rounded-xl max-w-lg mx-auto text-center">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-16 h-16 mx-auto text-primary mb-4">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+            </svg>
+            
+            <h3 className="text-xl font-bold mb-4">We&apos;d love to hear from you</h3>
+            
+            <p className="mb-6 text-lg">
+              Have questions or ready to get started? Send us an email at:
+            </p>
+            
+            <a href="mailto:veronsundaram13@gmail.com" className="text-primary font-medium text-xl hover:underline">
+              veronsundaram13@gmail.com
+            </a>
+            
+            <p className="mt-6 text-sm opacity-75">
+              We typically respond to all inquiries within 24 business hours.
+            </p>
+          </div>
         </div>
       </section>
 

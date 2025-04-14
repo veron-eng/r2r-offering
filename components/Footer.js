@@ -24,6 +24,7 @@ export default function Footer() {
             <a href="#pricing" className="link link-hover">Pricing</a>
             <a href="#calculator" className="link link-hover">ROI Calculator</a>
             <a href="#faq" className="link link-hover">FAQ</a>
+            <a href="#contact" className="link link-hover">Contact</a>
           </div>
         </div>
         <div className="mt-6 text-center md:text-left opacity-75 text-sm">
