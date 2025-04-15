@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Footer() {
   return (
@@ -24,6 +25,7 @@ export default function Footer() {
             <a href="#pricing" className="link link-hover">Pricing</a>
             <a href="#calculator" className="link link-hover">ROI Calculator</a>
             <a href="#faq" className="link link-hover">FAQ</a>
+            <Link href="/blogs" className="link link-hover">Blog</Link>
             <a href="#contact" className="link link-hover">Contact</a>
           </div>
         </div>

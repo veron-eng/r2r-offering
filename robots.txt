@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Allow: /blogs/
+Disallow: /studio/
 
 Sitemap: https://rent-press.com/sitemap.xml

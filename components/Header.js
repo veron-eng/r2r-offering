@@ -35,6 +35,7 @@ export default function Header() {
           <Link href="#features" className="link link-hover">Features</Link>
           <Link href="#how-it-works" className="link link-hover">How It Works</Link>
           <Link href="#pricing" className="link link-hover">Pricing</Link>
+          <Link href="/blogs" className="link link-hover">Blog</Link>
         </div>
         
         {/* Desktop CTA */}
@@ -69,6 +70,7 @@ export default function Header() {
             <Link href="#features" className="link link-hover py-2" onClick={() => setIsMenuOpen(false)}>Features</Link>
             <Link href="#how-it-works" className="link link-hover py-2" onClick={() => setIsMenuOpen(false)}>How It Works</Link>
             <Link href="#pricing" className="link link-hover py-2" onClick={() => setIsMenuOpen(false)}>Pricing</Link>
+            <Link href="/blogs" className="link link-hover py-2" onClick={() => setIsMenuOpen(false)}>Blog</Link>
             <div className="pt-2">
               <ButtonCTA text="Contact Us" href="#contact" />
             </div>
